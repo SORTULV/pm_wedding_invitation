@@ -178,6 +178,7 @@
             padding-left: 4vw;
             padding-bottom: 1vw;
         }
+
         .dop-text {
             font-style: italic;
             margin-bottom: 1vw;
@@ -338,6 +339,32 @@
             outline: none;
             box-shadow: 0 0 0 3px rgba(55, 119, 120, 0.3);
         }
+
+        /* Стили для каруселей */
+        .carousel {
+            -webkit-overflow-scrolling: touch;
+            /* Плавный скролл на iOS */
+        }
+
+        .carousel::-webkit-scrollbar {
+            display: none;
+            /* Скрываем scrollbar */
+        }
+
+        .carousel-item {
+            transition: transform 0.3s ease;
+        }
+
+        .carousel-item:hover {
+            transform: scale(1.02);
+        }
+
+        /* Адаптивность */
+        @media (max-width: 600px) {
+            .carousel-item {
+                flex: 0 0 85% !important;
+            }
+        }
     </style>
 </head>
 
@@ -422,8 +449,53 @@
         <!-- Дресс-код -->
         <div class="drs-text"><img src="images/дресс код.png" alt="дресс код"></div>
         <div class="dresscode-text">Мы ждем вас всех в костюмах телепузиков, мой любимый - ПО, ему всё ПО... Лаааадно
-            шутка, вот эти квадратики помогут с выбором цвета. Очень важное замечание!!! <b>Костюмы - в пижамном стиле, это
+            шутка, вот эти квадратики помогут с выбором цвета. Очень важное замечание!!! <b>Костюмы - в пижамном стиле,
+                это
                 обязательно!!! Ниже будут примеры костюмов</b></div>
+        <div class="carousels-container" style="width: 90%; margin: 30px auto; position: relative;">
+            <h3 style="text-align: center; margin-bottom: 20px; color: var(--accent-color);">Примеры пижамных костюмов
+            </h3>
+
+            <!-- Карусель для женщин -->
+            <div class="carousel-wrapper" style="margin-bottom: 40px;">
+                <h4 style="text-align: center; margin-bottom: 10px;">Для женщин</h4>
+                <div class="carousel"
+                    style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 15px; padding: 10px 0; scrollbar-width: none;">
+                    <div class="carousel-item" style="scroll-snap-align: center; flex: 0 0 80%;">
+                        <img src="images/беж Ж.PNG" alt="Бежевый женский"
+                            style="width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                    </div>
+                    <div class="carousel-item" style="scroll-snap-align: center; flex: 0 0 80%;">
+                        <img src="images/серый Ж.PNG" alt="Серый женский"
+                            style="width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                    </div>
+                    <div class="carousel-item" style="scroll-snap-align: center; flex: 0 0 80%;">
+                        <img src="images/бирюза Ж.PNG" alt="Бирюзовый женский"
+                            style="width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карусель для мужчин -->
+            <div class="carousel-wrapper">
+                <h4 style="text-align: center; margin-bottom: 10px;">Для мужчин</h4>
+                <div class="carousel"
+                    style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 15px; padding: 10px 0; scrollbar-width: none;">
+                    <div class="carousel-item" style="scroll-snap-align: center; flex: 0 0 80%;">
+                        <img src="images/беж М.PNG" alt="Бежевый мужской"
+                            style="width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                    </div>
+                    <div class="carousel-item" style="scroll-snap-align: center; flex: 0 0 80%;">
+                        <img src="images/серый М.PNG" alt="Серый мужской"
+                            style="width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                    </div>
+                    <div class="carousel-item" style="scroll-snap-align: center; flex: 0 0 80%;">
+                        <img src="images/бирюза М.PNG" alt="Бирюзовый мужской"
+                            style="width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="name-input-container">
             <div class="fun-text"><img src="images/ваше имя.png" alt="Ваше имя"></div>
             <input type="text" id="guestName" placeholder="Напишите ваше имя" class="name-input">
