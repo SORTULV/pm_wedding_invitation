@@ -166,7 +166,7 @@
 
         .wishes-text {
             font-style: italic;
-            margin-top: 3vw;
+            margin-bottom: 1vw;
             font-size: clamp(12px, 3.5vw, 16px);
         }
 
@@ -175,9 +175,15 @@
             justify-content: center;
             align-items: center;
             padding-left: 4vw;
-            padding-bottom: 4vw;
+            padding-bottom: 1vw;
         }
-
+        .dvs-text{
+            width: 80%;
+            justify-content: center;
+            align-items: center;
+            padding-top: 2vw;
+            padding-bottom: 1vw;
+        }
         .color-palette {
             display: flex;
             justify-content: center;
@@ -206,10 +212,11 @@
             transform: translateY(-5px);
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
         }
-
+        .drs-text {
+            margin-top: 1vw;
+        }
         .dresscode-text {
             font-style: italic;
-            margin-top: 3vw;
             position: relative;
             z-index: 2;
             font-size: clamp(12px, 4vw, 16px);
@@ -307,6 +314,7 @@
             font-size: 16px;
             text-align: center;
             margin-top: 10px;
+            margin-bottom: 10px;
             background-color: rgba(255, 255, 255, 0.7);
         }
 
@@ -396,7 +404,7 @@
         </div>
 
         <!-- Дресс-код -->
-        <div class="fun-text"><img src="images/дресс код.png" alt="дресс код"></div>
+        <div class="drs-text"><img src="images/дресс код.png" alt="дресс код"></div>
         <div class="dresscode-text">Мы ждем вас всех в костюмах телепузиков, мой любимый - ПО, ему всё ПО... Лаааадно
             шутка, вот эти квадратики помогут с выбором цвета. Очень важное замечание!!! <b>Костюмы - пижамные, это
                 обязательно!!!</b></div>
@@ -419,9 +427,12 @@
             <div class="color-box" style="background-color: var(--color-5);" data-color="#d2af94"
                 data-color-name="Бежевый">#d2af94</div>
         </div>
-        <div class="fun-text"><img src="images/дополнительно.png" alt="дополнительно"></div>
-        <div class="dop-text">Принимаются заявки! Наша таверна к вашим услугам! Меню? Бар?? У нас всё есть, но мы не покажем))) Ждем ваших пожеланий</div>
-        <div class="fun-text"><img src="images/до встречи.png" alt="до встречи"></div>
+        <div class="wishes">
+            <div class="fun-text"><img src="images/дополнительно.png" alt="дополнительно"></div>
+            <div class="dop-text">Принимаются заявки! Наша таверна к вашим услугам! Меню? Бар?? У нас всё есть, но мы не покажем))) Ждем ваших пожеланий</div>
+        </div>
+
+        <div class="dvs-text"><img src="images/до встречи.png" alt="до встречи"></div>
     </div>
 
     <!-- Модальное окно -->
@@ -520,7 +531,7 @@
     👤 Имя: ${data.name}
     🌈 Цвет: ${data.colorName} (${data.color})
     ⏰ Время: ${data.timestamp}
-    
+
     ${data.stats}`;
 
                 try {
